@@ -1,11 +1,11 @@
-## UDP Custom - Installer and Manager
+## INFINITY Custom 
 #### * Version ⇢ 2.5-Lite
 ---
 UDP (User Datagram Protocol) is a network communication protocol that operates on top of IP (Internet Protocol). It is a simpler protocol compared to TCP (Transmission Control Protocol), as it aims for speed rather than reliability.
 
 ---
 ## Changelog: 
-see [commits](https://github.com/NiLphreakz/UDP-CUSTOM/commits/main)
+see [commits](https://github.com/Infinity/UDP-CUSTOM/commits/main)
 
 ---
 
@@ -18,7 +18,7 @@ see [commits](https://github.com/NiLphreakz/UDP-CUSTOM/commits/main)
 sudo -s
 ``` 
 ```
-wget "https://raw.githubusercontent.com/NiLphreakz/UDP-CUSTOM/main/install.sh" -O install.sh && chmod +x install.sh && ./install.sh
+wget "https://raw.githubusercontent.com/Infinity/UDP-CUSTOM/main/install.sh" -O install.sh && chmod +x install.sh && ./install.sh
 ```
 
 
