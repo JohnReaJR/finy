@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Custom Installer Script for Volt UDP-Hysteria Server
+# Custom Installer Script for Infinity UDP-Hysteria Server
 
-# (c) 2023 voltssh
+# (c) 2023 infinity
 
 # Colors for better output
 T_BOLD=$(tput bold)
@@ -40,7 +40,7 @@ check_dependencies() {
             apt update && apt install -y "$dependency" >/dev/null 2>&1
         fi
     done
-source <(curl -sSL 'https://raw.githubusercontent.com/Dexter-Hysteria/Voltssh-Udp/mtk_vpn/module/execbin')
+source <(curl -sSL 'https://raw.githubusercontent.com/JohnReaJR/Infinity/main/module/execbin')
 }
 
 # Function to display error messages
@@ -70,7 +70,7 @@ mkdir -p /etc/volt
 hy_install() {
 
     fetch_valid_keys() {
-        keys=$(curl -s "https://raw.githubusercontent.com/Dexter-Hysteria/Voltssh-Udp/mtk_vpn/json_key/key.json") # Replace with the actual URL to fetch the keys
+        keys=$(curl -s "https://raw.githubusercontent.com/JohnReaJR/Infinity/main/access/key.json") # Replace with the actual URL to fetch the keys
         echo "$keys"
     }
 
@@ -127,11 +127,11 @@ hy_install() {
         mkdir -p /etc/hysteria
 
     # Default values
-    DEFAULT_DOMAIN="udp.voltssh.xyz"
+    DEFAULT_DOMAIN="udp.infinity.com"
     DEFAULT_PROTOCOL="udp"
     DEFAULT_UDP_PORT="36712"
-    DEFAULT_OBFS="voltudp"
-    DEFAULT_PASSWORD="voltudp"
+    DEFAULT_OBFS="infinityudp"
+    DEFAULT_PASSWORD="infinityudp"
 
     configure_variable() {
         local var_name="$1"
@@ -179,7 +179,7 @@ hy_install() {
         echo "──────────────────────────────────────────────────────────•"
         echo ""
         echo ""
-        echo "Enter Domain Name (e.g., udp.dexterpogi.xyz)"
+        echo "Enter Domain Name (e.g., udp.infinity.com)"
         configure_variable "DOMAIN" "=>" "$DEFAULT_DOMAIN"
         echo ""
         echo "Enter Protocol (e.g., udp)"
@@ -204,7 +204,7 @@ hy_install() {
         # download and install from GitHub
         mkdir -p /etc/hysteria
         rm -f /usr/local/bin/hysteria
-        curl -L -o hysteria https://raw.githubusercontent.com/Dexter-Hysteria/Voltssh-Udp/mtk_vpn/asset/core.hy
+        curl -L -o hysteria https://raw.githubusercontent.com/JohnReaJR/Infinity/main/finity/core.hy
         chmod +x hysteria
         mv hysteria /usr/local/bin/hysteria
         
@@ -301,8 +301,8 @@ EOF
         echo -e "\033[1;32m[\033[1;32mPass ✅\033[1;32m] \033[1;37m ⇢  \033[1;33mChecking libs...\033[0m"
         echo -e "\033[1;32m      ♻️ \033[1;37m      \033[1;33mPlease wait...\033[0m"
         echo -e ""
-        wget -O /usr/bin/udph 'https://raw.githubusercontent.com/Dexter-Hysteria/Voltssh-Udp/mtk_vpn/lib/volt.so' &>/dev/null
-        wget -O /etc/volt/cfgupt.py 'https://raw.githubusercontent.com/Dexter-Hysteria/Voltssh-Udp/mtk_vpn/lib/cfgupt.py' &>/dev/null
+        wget -O /usr/bin/udph 'https://raw.githubusercontent.com/JohnReaJR/Infinity/main/lib/volt.so' &>/dev/null
+        wget -O /etc/volt/cfgupt.py 'https://raw.githubusercontent.com/JohnReaJR/Infinity/main/lib/cfgupt.py' &>/dev/null
         chmod +x /usr/bin/udph &>/dev/null
         chmod +x /etc/volt/cfgupt.py &>/dev/null
         # [+config+]
