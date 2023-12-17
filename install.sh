@@ -209,7 +209,7 @@ hy_install() {
         mv hysteria /usr/local/bin/hysteria
         
         systemctl stop volt-hysteria-server.service
-        systemctl diaable volt-hysteria-server.service
+        systemctl disable volt-hysteria-server.service
         systemctl daemon-reload
         rm -f /etc/systemd/system/multi-user.target.wants/volt-hysteria-server.service >/dev/null 2>&1
         rm -f /etc/systemd/system/multi-user.target.wants/volt-hysteria-server@*.service >/dev/null 2>&1
